@@ -1,0 +1,13 @@
+<h1>Widgets</h1>
+
+<% if widgets.any? %>
+  <div id="widgets">
+    <% widgets.each do |widget| %>
+      <div class="widget">
+        <h2><%= widget.name %></h2>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <h2>There are no widgets :(</h2>
+<% end %>
