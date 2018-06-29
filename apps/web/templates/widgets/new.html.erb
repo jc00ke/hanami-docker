@@ -1,0 +1,14 @@
+<h2>Add a widget</h2>
+
+<%=
+  form_for :widget, routes.widgets_path do
+    div class: "input" do
+      label :name
+      text_field :name
+    end
+
+    div class: "controls" do
+      submit "Create widget"
+    end
+  end
+%>
