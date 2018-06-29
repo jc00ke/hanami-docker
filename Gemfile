@@ -14,6 +14,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'aptible-cli'
   gem 'dotenv', '~> 2.0'
 end
 
