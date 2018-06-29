@@ -1,0 +1,2 @@
+module Spike
+end

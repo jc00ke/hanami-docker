@@ -1,0 +1,3 @@
+project=spike
+test=rspec
+template=erb
