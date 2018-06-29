@@ -10,7 +10,8 @@ RUN apk --update add \
     bash \
     ca-certificates \
     build-base \
-    postgresql-client
+    postgresql-client \
+    postgresql-dev
 
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
