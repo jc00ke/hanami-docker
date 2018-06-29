@@ -1,5 +1,16 @@
 <h2>Add a widget</h2>
 
+<% unless params.valid? %>
+  <div class="errors">
+    <h3>Fix it</h3>
+
+    <ul>
+      <% params.error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%=
   form_for :widget, routes.widgets_path do
     div class: "input" do
