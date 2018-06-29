@@ -2,8 +2,8 @@ FROM ruby:2.5.1-alpine
 
 LABEL maintainer="jesse@relativepath.io"
 
-ADD Gemfile /app
-ADD Gemfile.lock /app
+ADD Gemfile /app/
+ADD Gemfile.lock /app/
 WORKDIR /app
 RUN bundle install
 
