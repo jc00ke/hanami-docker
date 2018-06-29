@@ -6,6 +6,11 @@
     <% widgets.each do |widget| %>
       <div class="widget">
         <h2><%= widget.name %></h2>
+        <%=
+          form_for :widget, routes.widget_path(widget.id), method: :delete do
+            submit "Delete"
+          end
+        %>
       </div>
     <% end %>
   </div>
