@@ -2,6 +2,11 @@ FROM ruby:2.5.1-alpine
 
 LABEL maintainer="jesse@relativepath.io"
 
+RUN apk update
+RUN apk upgrade
+RUN apk --update add \
+    libstdc++ tzdata bash ca-certificates build-base
+
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
 WORKDIR /app
