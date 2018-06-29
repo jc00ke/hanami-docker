@@ -5,7 +5,12 @@ LABEL maintainer="jesse@relativepath.io"
 RUN apk update
 RUN apk upgrade
 RUN apk --update add \
-    libstdc++ tzdata bash ca-certificates build-base
+    libstdc++ \
+    tzdata \
+    bash \
+    ca-certificates \
+    build-base \
+    postgresql-client
 
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
