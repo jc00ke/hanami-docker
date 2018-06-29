@@ -16,7 +16,7 @@ RUN apk --update add \
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
 WORKDIR /app
-RUN bundle install
+RUN bundle install --without development test
 
 ADD . /app
 
@@ -26,4 +26,4 @@ ENV LANG=C.UTF-8
 ENV HANAMI_ENV=production
 ENV HANAMI_HOST=0.0.0.0
 
-CMD ["hanami" "server"]
+CMD ["bundle" "exec" "hanami" "server"]
