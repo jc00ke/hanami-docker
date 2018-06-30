@@ -25,4 +25,4 @@ EXPOSE 2300
 ENV LANG=C.UTF-8
 ENV HANAMI_ENV=production
 
-ENTRYPOINT /run.sh
+ENTRYPOINT bundle exec hanami server --host 0.0.0.0 -p 2300
