@@ -16,6 +16,7 @@ RUN apk --update add \
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
 WORKDIR /app
+RUN gem install -N bundler
 RUN bundle install --without development test
 
 ADD . /app
