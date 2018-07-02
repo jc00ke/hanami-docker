@@ -26,4 +26,4 @@ ENV LANG=C.UTF-8
 ENV HANAMI_ENV=production
 
 #ENTRYPOINT bundle exec hanami server --host 0.0.0.0 -p 2300
-CMD ["bundle" "exec" "hanami" "server" "--host" "0.0.0.0" "-p" "2300"]
+CMD bundle exec hanami server --host 0.0.0.0 -p 2300
